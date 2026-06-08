@@ -1,24 +1,24 @@
-mod.id = "template"
-mod.name = "Template Mod"
-mod.group = "dev.placeholder.modid"
+mod.id = "texting_colonists"
+mod.name = "Texting Colonists (Talking Colonists Add-On)"
+mod.group = "me.sshcrack.texting_colonists"
 mod.version = "1.0.0"
 mod.channel_tag = ""
-mod.description = "A Minecraft mod built with the multi-loader template"
-mod.authors = ["Your Name"]
+mod.description = "Enables you to text the citizens in talking colonists"
+mod.authors = ["sshcrack"]
 mod.contributors = []
 mod.inception_year = "2025"
 mod.license.name = "All rights reserved"
-mod.license.url = "https://example.com/license"
+mod.license.url = "(no url)"
 mod.license.dist = "repo"
-mod.sources_url = "https://github.com/your-org/your-mod"
-mod.homepage_url = "https://github.com/your-org/your-mod"
-mod.issues_url = "https://github.com/your-org/your-mod/issues"
+mod.sources_url = "https://github.com/sshcrack/texting-colonists-addon"
+mod.homepage_url = "https://github.com/sshcrack/texting-colonists-addon"
+mod.issues_url = "https://github.com/sshcrack/texting-colonists-addon/issues"
 mod.discord_url = ""
 
 [[mod.pom.developers]]
-id = "your-name"
-name = "Your Name"
-url = "https://github.com/your-org"
+id = "me.sshcrack"
+name = "sshcrak"
+url = "https://github.com/sshcrack/"
 
 [forge]
 

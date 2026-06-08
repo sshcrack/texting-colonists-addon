@@ -1,6 +1,6 @@
 {
   "required": false,
-  "package": "dev.placeholder.modid.mixin",
+  "package": "me.sshcrack.texting_colonists.mixin",
   "compatibilityLevel": "${java}",
   "mixins": [
     "ExampleMixin"

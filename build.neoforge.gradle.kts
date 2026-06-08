@@ -75,6 +75,15 @@ repositories {
     }
 }
 
+
+
+dependencies {
+    implementation(libs.moulberry.mixinconstraints)
+    jarJar(libs.moulberry.mixinconstraints)
+
+    implementation("me.sshcrack:mc_talking:${prop("deps.talking_colonists_version")}-${prop("deps.minecraft")}-neoforge")
+}
+
 var loader = sc.current.component1().split("-")[1]
 publishing {
     publications {
@@ -87,11 +96,6 @@ publishing {
             tasks.findByName("sourcesJar")?.let { artifact(it) }
         }
     }
-
-dependencies {
-    implementation(libs.moulberry.mixinconstraints)
-    jarJar(libs.moulberry.mixinconstraints)
-}
 
 repositories {
         maven {

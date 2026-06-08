@@ -81,6 +81,8 @@ dependencies {
 
     implementation(libs.moulberry.mixinconstraints)
     jarJar(libs.moulberry.mixinconstraints)
+
+    modImplementation("me.sshcrack:mc_talking:${prop("deps.talking_colonists_version")}-${prop("deps.minecraft")}-forge")
 }
 
 sourceSets {

@@ -1,4 +1,4 @@
-package dev.placeholder.modid.mixin;
+package me.sshcrack.texting_colonists.mixin;
 
 import dev.kikugie.fletching_table.annotation.MixinEnvironment;
 import net.minecraft.server.MinecraftServer;

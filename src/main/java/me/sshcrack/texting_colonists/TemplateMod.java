@@ -1,4 +1,4 @@
-package dev.placeholder.modid;
+package me.sshcrack.texting_colonists;
 
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
