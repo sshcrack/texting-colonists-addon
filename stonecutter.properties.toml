@@ -1,0 +1,35 @@
+mod.id = "template"
+mod.name = "Template Mod"
+mod.group = "dev.placeholder.modid"
+mod.version = "1.0.0"
+mod.channel_tag = ""
+mod.description = "A Minecraft mod built with the multi-loader template"
+mod.authors = ["Your Name"]
+mod.contributors = []
+mod.inception_year = "2025"
+mod.license.name = "All rights reserved"
+mod.license.url = "https://example.com/license"
+mod.license.dist = "repo"
+mod.sources_url = "https://github.com/your-org/your-mod"
+mod.homepage_url = "https://github.com/your-org/your-mod"
+mod.issues_url = "https://github.com/your-org/your-mod/issues"
+mod.discord_url = ""
+
+[[mod.pom.developers]]
+id = "your-name"
+name = "Your Name"
+url = "https://github.com/your-org"
+
+[forge]
+
+[forge."1.20.1"]
+deps.minecraft = "1.20.1"
+deps.forge = "47.2.0"
+
+
+[neoforge]
+
+[neoforge."1.21.1"]
+deps.minecraft = "1.21.1"
+deps.parchment = "1.21.1:2024.11.17"
+deps.neoforge = "21.1.213"

@@ -1,0 +1,11 @@
+{
+  "required": false,
+  "package": "dev.placeholder.modid.mixin",
+  "compatibilityLevel": "${java}",
+  "mixins": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
