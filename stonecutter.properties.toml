@@ -1,3 +1,6 @@
+deps.voice_chat = "2.6.16"
+deps.yacl = "3.6.6"
+
 mod.id = "texting_colonists"
 mod.name = "Texting Colonists (Talking Colonists Add-On)"
 mod.group = "me.sshcrack.texting_colonists"
@@ -25,7 +28,11 @@ url = "https://github.com/sshcrack/"
 [forge."1.20.1"]
 deps.minecraft = "1.20.1"
 deps.forge = "47.2.0"
-
+deps.minecolonies = "1.20.1-1.1.1218-snapshot"
+deps.gemini_live_lib = "2.3.4"
+deps.structurize = "1.20.1-1.0.806-snapshot"
+deps.blockui = "1.20.1-1.0.190-snapshot"
+deps.domum = "1.20.1-1.0.288-snapshot"
 
 [neoforge]
 
@@ -33,3 +40,8 @@ deps.forge = "47.2.0"
 deps.minecraft = "1.21.1"
 deps.parchment = "1.21.1:2024.11.17"
 deps.neoforge = "21.1.213"
+deps.minecolonies = "1.1.1305-1.21.1-snapshot"
+deps.gemini_live_lib = "2.3.4"
+deps.structurize = "1.0.823-1.21.1-snapshot"
+deps.blockui = "1.0.211-1.21.1-snapshot"
+deps.domum = "1.0.233-snapshot"

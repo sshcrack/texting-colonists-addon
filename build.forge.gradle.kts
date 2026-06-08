@@ -74,6 +74,25 @@ repositories {
         name = "sshcrackRepositoryReleases"
         url = uri("https://maven.sshcrack.me/releases")
     }
+
+    maven {
+        name = "LDTTeam - Mods Maven"
+        url = uri("https://ldtteam.jfrog.io/ldtteam/mods-maven/")
+    }
+
+    maven {
+        name = "Jared's Maven"
+        url = uri("https://maven.blamejared.com/")
+    }
+
+    maven("https://maven.isxander.dev/releases") {
+        name = "Xander Maven"
+    }
+
+    maven {
+        name = "Kotlin for Forge"
+        setUrl("https://thedarkcolour.github.io/KotlinForForge/")
+    }
 }
 
 dependencies {
@@ -83,6 +102,16 @@ dependencies {
     jarJar(libs.moulberry.mixinconstraints)
 
     modImplementation("me.sshcrack:mc_talking:${prop("deps.talking_colonists_version")}-${prop("deps.minecraft")}-forge")
+
+    modImplementation("com.ldtteam:minecolonies:${prop("deps.minecolonies")}")
+    modImplementation("me.sshcrack:gemini_live_lib:${prop("deps.gemini_live_lib")}-${prop("deps.minecraft")}-forge")
+
+    modRuntimeOnly("com.ldtteam:domum_ornamentum:${prop("deps.domum")}:universal")
+    modRuntimeOnly("com.ldtteam:structurize:${prop("deps.structurize")}")
+    modRuntimeOnly("com.ldtteam:blockui:${prop("deps.blockui")}")
+
+    modRuntimeOnly("maven.modrinth:simple-voice-chat:forge-${prop("deps.minecraft")}-${prop("deps.voice_chat")}")
+    modImplementation("dev.isxander:yet-another-config-lib:${prop("deps.yacl")}+${prop("deps.minecraft")}-forge")
 }
 
 sourceSets {

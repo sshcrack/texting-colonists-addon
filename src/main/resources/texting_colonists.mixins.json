@@ -2,9 +2,7 @@
   "required": false,
   "package": "me.sshcrack.texting_colonists.mixin",
   "compatibilityLevel": "${java}",
-  "mixins": [
-    "ExampleMixin"
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 0
   }
