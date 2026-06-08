@@ -19,16 +19,20 @@ sed_inplace() {
   fi
 }
 
+trim() {
+  echo "$1" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//'
+}
+
 prompt() {
   local var="$1" label="$2" default="$3"
   local val
   if [[ -n "$default" ]]; then
     read -r -p "$label [$default]: " val
-    echo "${val:-$default}"
   else
     read -r -p "$label: " val
-    echo "${val:-}"
   fi
+  val=$(trim "$val")
+  echo "${val:-$default}"
 }
 
 slugify() {
@@ -128,8 +132,12 @@ if [[ "$OLD_PKG_DIR" != "$NEW_PKG_DIR" ]]; then
 
   # Update package declarations in all Java files
   echo "  • Updating package declarations in Java files"
-  find "$ROOT/src/main/java" -name '*.java' -exec sed_inplace {} "s/^package $OLD_PKG_BASE\.$OLD_PKG_LEAF/package $PKG/" \;
-  find "$ROOT/src/main/java" -name '*.java' -exec sed_inplace {} "s/^package $OLD_PKG_BASE\.$OLD_PKG_LEAF\./package $PKG./" \;
+  while IFS= read -r -d '' f; do
+    sed_inplace "$f" "s/^package $OLD_PKG_BASE\.$OLD_PKG_LEAF/package $PKG/"
+  done < <(find "$ROOT/src/main/java" -name '*.java' -print0)
+  while IFS= read -r -d '' f; do
+    sed_inplace "$f" "s/^package $OLD_PKG_BASE\.$OLD_PKG_LEAF\./package $PKG./"
+  done < <(find "$ROOT/src/main/java" -name '*.java' -print0)
 fi
 
 # --- 3. Rename mixins.json -------------------------------------------
